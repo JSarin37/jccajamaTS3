@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jccajamaTS3.Vistas.vLogin">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+        <Image Source="login.png"
+               HeightRequest="175"/>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario" Margin="15,10"
+                   FontSize="20"
+                   VerticalOptions="Center"
+
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+
+            <Frame 
+                   InputTransparent="False"
+                   CornerRadius="35" 
+                Grid.Row="0"
+               Grid.Column="1">
+                <Entry x:Name="txtUsuario"
+
+             Placeholder="Ingrese Usuario"
+              MaxLength="7" />
+            </Frame>
+            <Label
+                Grid.Row="1"
+               Grid.Column="0"
+                
+                />
+            <Label Text="Contraseña" Margin="15,10"
+                   FontSize="20"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+
+            <Frame 
+                   InputTransparent="False"
+                   CornerRadius="35" 
+                Grid.Row="2"
+               Grid.Column="1">
+                <Entry x:Name="txtContraseña"
+               Placeholder="Ingrese la Contraseña"
+
+               IsPassword="True"
+/>
+            </Frame>
+
+        </Grid>
+        <Button x:Name="btnInicio"
+                Text="INICIAR SESION"
+                CornerRadius="30"
+                WidthRequest="300"  
+                Clicked="btnInicio_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>
